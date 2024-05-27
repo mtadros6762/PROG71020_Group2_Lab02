@@ -2,6 +2,9 @@
 
 //madisont, adilf, armaanm - prog71020 - lab02 - location class interface
 
+//REQUIREMENTS
+//• Design and implement a Location class
+
 #ifndef LOCATION_CLASS_H
 #define LOCATION_CLASS_H
 
