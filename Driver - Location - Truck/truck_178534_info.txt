@@ -1,0 +1,5 @@
+Driver first name: amna
+Driver last name: farid
+Driver ID: 1657
+Truck ID: 178534
+Truck location (x,y): (45.000000,55.000000)

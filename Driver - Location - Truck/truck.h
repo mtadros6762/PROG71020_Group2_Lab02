@@ -34,6 +34,12 @@ public:
 	void setLocation(location l) {
 		Location = l;
 	}
+	float getLongitude() {
+		return Location.Get_Lonitude();
+	}
+	float getLatitude() {
+		return Location.Get_Latitude();
+	}
 
 	void SetTruckID(int id) {
 		TruckID = id;
@@ -62,9 +68,10 @@ public:
 	}
 
 
+
 	
 };
-
+void Save_to_File(driver drv, truck trk);
 
 
 #endif //TRUCK_CLASS_H
