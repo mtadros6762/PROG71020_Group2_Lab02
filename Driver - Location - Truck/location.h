@@ -8,19 +8,39 @@
 #ifndef LOCATION_CLASS_H
 #define LOCATION_CLASS_H
 
-//LIBRARIES & MACROS
+
 #include <iostream>
 
-//CLASS AND FUNCTIONS
+using namespace std;
+
 class location {
-	//DATA
-	float latitude;
-	float longitude;
+	
+private:
+	/*Data_Coordinates*/
+	float latitude;/*latitude is x */
+	float longitude;/*longitude is y*/
 	
 public:
-	//CONSTRUCTORS?
+	/*Default Constructor*/
+	location() : latitude(0), longitude(0) {}
 
-	//FUNCTIONS
+	location(double xCoord, double yCoord) : latitude(xCoord), longitude(yCoord) {}
+
+	void Set_Longitude() {
+		cout << "Enter the Longitude " << endl;
+		cin >> longitude;
+	}
+	void Set_Latitude() {
+		cout << "Enter the Latitude " << endl;
+		cin >> latitude;
+	}
+
+	float Get_Lonitude() {
+		return longitude;
+	}
+	float Get_Latitude() {
+		return latitude;
+	}
 };
 
 #endif //LOCATION_CLASS_H
