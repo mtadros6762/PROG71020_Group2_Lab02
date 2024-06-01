@@ -33,11 +33,19 @@
 using namespace std;
 
 int main() {
-    /*Creating Driver 1 Objects*/
-   
-    
     driver driver1;
-    cout << "Initializing Driver 1:" << endl;
+    driver driver2;
+    driver driver3;
+    truck truck1;
+    truck1.SetTruckID(178534);
+    truck truck2;
+    truck2.SetTruckID(245817);
+    /*Reading from the file if already exists*/
+    Read_from_File(truck1);
+    Read_from_File(truck2);
+
+    /*Creating Driver 1 Objects*/
+    cout <<endl << "Initializing Driver 1:" << endl;
     driver1.SetDrivername();
     driver1.SetDriverID();
     location location_1;
@@ -45,8 +53,7 @@ int main() {
     location_1.Set_Longitude();
     
     /*Creating Driver 2 Objects*/
-    driver driver2;
-    cout << "Initializing Driver 2:" << endl;
+    cout <<endl<< "Initializing Driver 2:" << endl;
     driver2.SetDrivername();
     driver2.SetDriverID();
     location location_2;
@@ -54,8 +61,7 @@ int main() {
     location_2.Set_Longitude();
    
     /* /*Creating Driver 3 Objects*/
-    driver driver3;
-    cout << "Initializing Driver 3:" << endl;
+    cout<<endl << "Initializing Driver 3:" << endl;
     driver3.SetDrivername();
     driver3.SetDriverID();
     location location_3;
@@ -63,15 +69,13 @@ int main() {
     location_3.Set_Longitude(); 
    
    /*Creating Truck Objects*/
-    truck truck1;
     truck1.setDriver(driver1);
     truck1.setLocation(location_1);
-    truck1.SetTruckID(178534);
+  
 
-    truck truck2;
     truck2.setDriver(driver2);
     truck2.setLocation(location_2);
-    truck2.SetTruckID(245817);
+  
 
     /*Assigning Access card of truck 1 to driver 3*/
     truck1.setAccessCard(driver3.GetDriverID());

@@ -1,5 +1,5 @@
-Driver first name: inshal
-Driver last name: farid
-Driver ID: 1999
+Driver first name: Aqib
+Driver last name: Farid
+Driver ID: 1977
 Truck ID: 245817
-Truck location (x,y): (55.000000,66.000000)
+Truck location (x,y): (40.000000,50.000000)

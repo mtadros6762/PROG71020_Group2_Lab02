@@ -73,5 +73,6 @@ public:
 };
 void Save_to_File(driver drv, truck trk);
 
+void Read_from_File(truck trk);
 
 #endif //TRUCK_CLASS_H

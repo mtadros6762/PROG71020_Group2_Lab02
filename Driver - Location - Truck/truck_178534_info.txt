@@ -1,5 +1,5 @@
-Driver first name: amna
-Driver last name: farid
-Driver ID: 1657
+Driver first name: Ali
+Driver last name: Ahmed
+Driver ID: 5555
 Truck ID: 178534
-Truck location (x,y): (45.000000,55.000000)
+Truck location (x,y): (20.000000,30.000000)
