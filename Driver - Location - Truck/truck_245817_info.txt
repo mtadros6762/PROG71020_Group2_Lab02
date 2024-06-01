@@ -1,0 +1,5 @@
+Driver first name: inshal
+Driver last name: farid
+Driver ID: 1999
+Truck ID: 245817
+Truck location (x,y): (55.000000,66.000000)

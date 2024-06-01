@@ -34,6 +34,8 @@ using namespace std;
 
 int main() {
     /*Creating Driver 1 Objects*/
+   
+    
     driver driver1;
     cout << "Initializing Driver 1:" << endl;
     driver1.SetDrivername();
@@ -93,6 +95,10 @@ int main() {
     cout << "The distance between the two trucks is: " << distanceBetweenTrucks << endl;
     cout << "The distance between the truck (with ID = 178534) and the origin is: " << distanceFromOrigin1 << endl;
     cout << "The distance between the truck (with ID = 245817) and the origin is: " << distanceFromOrigin2 << endl;
+    cout << "Saving information to the file" << endl << endl;
+    Save_to_File(driver1, truck1);
+    Save_to_File(driver2, truck2);
+    Save_to_File(driver3, truck1);
 
     return EXIT_SUCCESS;
 }

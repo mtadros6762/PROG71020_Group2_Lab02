@@ -137,6 +137,10 @@
     <ClInclude Include="location.h" />
     <ClInclude Include="truck.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="truck_178534_info.txt" />
+    <Text Include="truck_245817_info.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
