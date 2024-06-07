@@ -1,61 +1,44 @@
 #pragma once
 
-// madisont, adilf, armaanm - prog71020 - lab02 - driver class interface
+//madisont, adilf, armaanm - prog71020 - lab02 - driver class interface
 
-// REQUIREMENTS
-// • Design and implement a Driver class
+//REQUIREMENTS
+//• Design and implement a Driver class
 
 #ifndef DRIVER_CLASS_H
 #define DRIVER_CLASS_H
 
-// LIBRARIES & MACROS
+//LIBRARIES
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-// CLASS
+//CLASS
 class driver {
 private:
+    //DATA
     string First_Name;
     string Last_Name;
     int Driver_ID;
 
 public:
-    /*Default Constructor*/
-    driver(): First_Name(""),Last_Name(""),Driver_ID(0) {}
+    /*DEFAULT CONSTRUCTOR*/
+    driver();
    
-    /*Member Functions*/
+    /*MEMBER FUNCTIONS*/
     
-    /*Setters*/
-    void SetDrivername() {
-        cout << "Enter first name for the Driver: ";
-        cin >> First_Name;
-        cout << "Enter last name for the Driver: ";
-        cin >> Last_Name;
-    }
-    void SetDriverID() {
-        cout << "Enter Driver's ID: ";
-        cin >> Driver_ID;
-    }
-    /*Getters*/
-    string GetFirstName()  {
-        return First_Name;
-    }
+    /*SETTERS*/
+    void SetDriverName();
+    void SetDriverID();
 
-    string GetLastName()  {
-        return Last_Name;
-    }
-
-    int GetDriverID()  {
-        
-        return Driver_ID;
-    }
-
-    string GetDriverDetails()  {
-        return "Driver's Name: " + First_Name + " " + Last_Name + "\nDriver's ID: " + to_string(Driver_ID);
-    }
-
+    /*GETTERS*/
+    string GetFirstName();
+    string GetLastName();
+    int GetDriverID();
+    string GetDriverDetails();
 };
+
+bool alphaValidation(string input);
 
 #endif // DRIVER_CLASS_H

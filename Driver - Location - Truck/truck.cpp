@@ -1,13 +1,54 @@
 #include "truck.h"
-#include "location.h"
-#include "driver.h"
-#include <iostream>
-#include <fstream>
-#include <string>
 
-using namespace std;
 //madisont, adilf, armaanm - prog71020 - lab02 - truck class implementation
 
+using namespace std;
+
+/*DEFAULT CONSTRUCTOR*/
+truck::truck() : TruckID(0), Location(0, 0), accessCard(0) {}
+
+/*SETTER FUNCTIONS*/
+void truck::setDriver(driver d) {
+    Driver = d;
+}
+void truck::setLocation(location l) {
+    Location = l;
+}
+float truck::getLongitude() {
+    return Location.Get_Longitude();
+}
+float truck::getLatitude() {
+    return Location.Get_Latitude();
+}
+
+void truck::SetTruckID(int id) {
+    TruckID = id;
+}
+void truck::setAccessCard(int cardID) {
+    accessCard = cardID;
+}
+bool truck::hasAccess(int cardID) {
+    return accessCard == cardID;
+}
+
+/*GETTER FUNCTIONS*/
+int truck::Get_TruckID() {
+    return TruckID;
+}
+location truck::getLocation() {
+    return Location;
+}
+double truck::distanceFrom(truck& otherTruck) {
+    double distance = sqrt(pow(Location.Get_Latitude() - otherTruck.Location.Get_Latitude(), 2) + pow(Location.Get_Longitude() - otherTruck.Location.Get_Longitude(), 2));
+    return distance;
+}
+double truck::distanceFromOrigin() {
+    location origin(0, 0);
+    double distance = sqrt(pow(Location.Get_Latitude() - origin.Get_Latitude(), 2) + pow(Location.Get_Longitude() - origin.Get_Longitude(), 2));
+    return distance;
+}
+
+//Function to save driver and truck information to a file
 void Save_to_File(driver drv, truck trk) {
     /*Formatting the information into a string*/
     string info = "Driver first name: " + drv.GetFirstName() + "\n" +
@@ -29,7 +70,7 @@ void Save_to_File(driver drv, truck trk) {
     }
 }
 
-
+//Function to read driver and truck information from a file
 void Read_from_File(truck trk) {
     // Creating the file name based on the truck ID
     string fileName = "truck_" + to_string(trk.Get_TruckID()) + "_info.txt";

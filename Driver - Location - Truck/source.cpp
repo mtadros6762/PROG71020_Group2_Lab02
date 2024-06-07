@@ -1,11 +1,10 @@
 #include "driver.h"
 #include "location.h"
 #include "truck.h"
-#include<fstream>
 #include<deque>
-#include <iostream>
 #include <cmath>
 #define EXIT_SUCCESS 0
+
 //madisont, adilf, armaanm - prog71020 - lab02 - source code implementation
 
 //REQUIREMENTS
@@ -13,7 +12,7 @@
 //a driver wants to drive one of the trucks, the driver must use an access card.The
 //card reader is attached to the truck door. Once the driver taps on the card reader
 //a set of information about the driver and the truck will be sent in the form of a
-//text file.The information that will be sent is :
+//text file.The information that will be sent is:
 //• Driver first name
 //• Driver last name
 //• Driver ID
@@ -28,25 +27,26 @@
 //The distance between the truck(with ID = 178534) and the origin is : ?
 //The distance between the truck(with ID = 245817) and the origin is : ?
 
-
-
 using namespace std;
 
-int main() {
+int main(void) {
+    /*Initializing object variables*/
     driver driver1;
     driver driver2;
     driver driver3;
+
     truck truck1;
     truck1.SetTruckID(178534);
     truck truck2;
     truck2.SetTruckID(245817);
+
     /*Reading from the file if already exists*/
     Read_from_File(truck1);
     Read_from_File(truck2);
 
     /*Creating Driver 1 Objects*/
     cout <<endl << "Initializing Driver 1:" << endl;
-    driver1.SetDrivername();
+    driver1.SetDriverName();
     driver1.SetDriverID();
     location location_1;
     location_1.Set_Latitude();
@@ -54,15 +54,15 @@ int main() {
     
     /*Creating Driver 2 Objects*/
     cout <<endl<< "Initializing Driver 2:" << endl;
-    driver2.SetDrivername();
+    driver2.SetDriverName();
     driver2.SetDriverID();
     location location_2;
     location_2.Set_Latitude();
     location_2.Set_Longitude();
    
-    /* /*Creating Driver 3 Objects*/
+    /*Creating Driver 3 Objects*/
     cout<<endl << "Initializing Driver 3:" << endl;
-    driver3.SetDrivername();
+    driver3.SetDriverName();
     driver3.SetDriverID();
     location location_3;
     location_3.Set_Latitude();
@@ -82,7 +82,7 @@ int main() {
 
     /*Checking whether the driver 3 has access for truck 1*/
     if (truck1.hasAccess(driver3.GetDriverID())) {
-        cout << driver3.GetFirstName() +" "+ driver3.GetLastName()<< " has access to drive Truck 1." << endl;
+        cout << driver3.GetFirstName() + " " + driver3.GetLastName()<< " has access to drive Truck 1." << endl;
     }
     else {
         cout << driver3.GetFirstName() + " " + driver3.GetLastName()<< " does not have access to drive Truck 1." << endl;
@@ -104,5 +104,5 @@ int main() {
     Save_to_File(driver2, truck2);
     Save_to_File(driver3, truck1);
 
-    return EXIT_SUCCESS;
+    return 0;
 }
