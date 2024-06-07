@@ -96,7 +96,7 @@ int main(void) {
     double distanceFromOrigin2 = truck2.distanceFromOrigin();
 
     /*Displaying result*/
-    cout << "The distance between the two trucks is: " << distanceBetweenTrucks << endl;
+    cout << "\nThe distance between the two trucks is: " << distanceBetweenTrucks << endl;
     cout << "The distance between the truck (with ID = 178534) and the origin is: " << distanceFromOrigin1 << endl;
     cout << "The distance between the truck (with ID = 245817) and the origin is: " << distanceFromOrigin2 << endl;
     cout << "Saving information to the file" << endl << endl;
